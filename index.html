@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde e Bem-Estar</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Vida Saudável</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#alimentacao">Alimentação</a></li>
+        <li><a href="#exercicios">Exercícios</a></li>
+    <li><a href="#video">Vídeo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero fade-in">
+    <h2>Cuide da sua mente e do seu corpo</h2>
+    <p>Descubra hábitos simples que podem transformar sua saúde e bem-estar.</p>
+  </section>
+
+  <section id="alimentacao" class="slide-up">
+    <h2>🍎 Alimentação Saudável</h2>
+    <img src="https://summitsaude.estadao.com.br/wp-content/uploads/2022/10/word-image-14178-2.jpeg" alt="Alimentação saudável">
+    <p>Uma dieta equilibrada é essencial para manter o corpo e a mente em harmonia. Inclua frutas, legumes, proteínas e beba bastante água.</p>
+  </section>
+
+  <section id="exercicios" class="slide-up">
+    <h2>🏃 Exercícios Físicos</h2>
+    <img src="https://tse3.mm.bing.net/th/id/OIP.YsayKpLfxn-nRx2pZeyuOwHaEe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pessoa se exercitando">
+    <p>Praticar atividades físicas regularmente melhora o humor, reduz o estresse e fortalece o corpo.</p>
+    <ul>
+      <li>Caminhada e corrida</li>
+      <li>Musculação</li>
+      <li>Yoga e meditação</li>
+    </ul>
+  </section>
+
+  <section id="video" class="fade-in">
+    <h2>🎥 Dicas de Saúde e Bem-Estar</h2>
+    <div class="video-container">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/uRrhXFK5TwQ?"
+        title="Dicas de Saúde e Bem-Estar - Canal brasileiro"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contato" class="slide-up">
+    <h2>📬 Fale Conosco</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Seu nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+ 
+  <footer>
+    <p>&copy; 2025 Vida Saudável. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Animações ao rolar a página
+    const elements = document.querySelectorAll('.fade-in, .slide-up');
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  </script>
+</body>
+</html>
