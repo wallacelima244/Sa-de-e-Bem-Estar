@@ -1,94 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-br">+
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saúde e Bem-Estar</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vida Saudável – SPA Premium</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+
 <body>
   <header>
     <h1>Vida Saudável</h1>
     <nav>
       <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#alimentacao">Alimentação</a></li>
-        <li><a href="#exercicios">Exercícios</a></li>
-    <li><a href="#video">Vídeo</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#" onclick="showSection('inicio')">Início</a></li>
+        <li><a href="#" onclick="showSection('alimentacao')">Alimentação</a></li>
+        <li><a href="#" onclick="showSection('treino')">Treino</a></li>
+        <li><a href="#" onclick="showSection('video')">Vídeo</a></li>
+        <li><a href="#" onclick="showSection('formulario')">Formulário</a></li>
+        <li><a href="#" onclick="showSection('pdf')">PDF</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio" class="hero fade-in">
-    <h2>Cuide da sua mente e do seu corpo</h2>
-    <p>Descubra hábitos simples que podem transformar sua saúde e bem-estar.</p>
-  </section>
+  <!-- SEÇÕES -->
+  <main>
 
-  <section id="alimentacao" class="slide-up">
-    <h2>🍎 Alimentação Saudável</h2>
-    <img src="https://summitsaude.estadao.com.br/wp-content/uploads/2022/10/word-image-14178-2.jpeg" alt="Alimentação saudável">
-    <p>Uma dieta equilibrada é essencial para manter o corpo e a mente em harmonia. Inclua frutas, legumes, proteínas e beba bastante água.</p>
-  </section>
+    <!-- INÍCIO -->
+    <section id="inicio" class="section active">
+      <h2>Bem-vindo ao Guia de Vida Saudável</h2>
 
-  <section id="exercicios" class="slide-up">
-    <h2>🏃 Exercícios Físicos</h2>
-    <img src="https://tse3.mm.bing.net/th/id/OIP.YsayKpLfxn-nRx2pZeyuOwHaEe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pessoa se exercitando">
-    <p>Praticar atividades físicas regularmente melhora o humor, reduz o estresse e fortalece o corpo.</p>
-    <ul>
-      <li>Caminhada e corrida</li>
-      <li>Musculação</li>
-      <li>Yoga e meditação</li>
-    </ul>
-  </section>
+      <img src="https://imgs.gvm.com.tw/upload/gallery/20201120/75982_01.jpg" alt="Vida saudável" />
 
-  <section id="video" class="fade-in">
-    <h2>🎥 Dicas de Saúde e Bem-Estar</h2>
-    <div class="video-container">
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/uRrhXFK5TwQ?"
-        title="Dicas de Saúde e Bem-Estar - Canal brasileiro"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+      <p style="margin-top:20px;">
+        O objetivo deste site é te ajudar a conquistar uma vida mais leve, forte e equilibrada.  
+        Aqui você encontra passos simples para transformar sua alimentação, treinos e saúde mental.
+      </p>
 
-  <section id="contato" class="slide-up">
-    <h2>📬 Fale Conosco</h2>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" placeholder="Seu nome" required>
+      <p>
+        Aplicar isso na sua vida traz resultados reais: mais energia, melhor humor, corpo mais forte
+        e uma mente mais clara. Pequenos hábitos mudam tudo — e você começa hoje.
+      </p>
+    </section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+    <!-- ALIMENTAÇÃO -->
+    <section id="alimentacao" class="section">
+      <h2>🍎 Alimentação Saudável</h2>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+      <img src="https://summitsaude.estadao.com.br/wp-content/uploads/2022/10/word-image-14178-2.jpeg" alt="Alimentos saudáveis" />
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
- 
+      <p>Uma dieta equilibrada fornece energia, fortalece o sistema imunológico e melhora o humor.</p>
+      <ul>
+        <li>Inclua frutas e vegetais coloridos.</li>
+        <li>Prefira proteínas magras e grãos integrais.</li>
+        <li>Beba no mínimo 2 litros de água por dia.</li>
+        <li>Evite excesso de açúcares e ultraprocessados.</li>
+      </ul>
+    </section>
+
+    <!-- TREINO -->
+    <section id="treino" class="section">
+      <h2>🏃 Treino e Exercícios</h2>
+
+      <img src="https://tse3.mm.bing.net/th/id/OIP.YsayKpLfxn-nRx2pZeyuOwHaEe?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pessoa treinando" />
+
+      <p>Atividades físicas regulares aumentam energia, reduzem estresse e fortalecem o corpo.</p>
+      <ul>
+        <li>Caminhada ou corrida 3-5 vezes por semana.</li>
+        <li>Musculação 2-3 vezes por semana.</li>
+        <li>Alongamentos ou yoga diariamente.</li>
+      </ul>
+    </section>
+
+    <!-- VÍDEO -->
+    <section id="video" class="section">
+      <h2>🎥 Vídeo sobre Saúde</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/uRrhXFK5TwQ" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section id="formulario" class="section">
+      <h2>📋 Avaliação de Hábitos Saudáveis</h2>
+      <form id="formSaude">
+        <label>1. Como você avalia sua alimentação?</label>
+        <select id="alimentacaoInput" required>
+          <option value="">Selecione</option>
+          <option>Excelente</option>
+          <option>Boa</option>
+          <option>Regular</option>
+          <option>Ruim</option>
+        </select>
+
+        <label>2. Quantos dias por semana você faz exercícios?</label>
+        <input type="number" id="exercicioInput" min="0" max="7" required />
+
+        <label>3. Como está seu sono?</label>
+        <select id="sonoInput" required>
+          <option value="">Selecione</option>
+          <option>Durmo bem</option>
+          <option>Durmo pouco</option>
+          <option>Insônia</option>
+        </select>
+
+        <label>4. Você bebe água suficiente (2L/dia)?</label>
+        <select id="aguaInput" required>
+          <option value="">Selecione</option>
+          <option>Sim</option>
+          <option>Mais ou menos</option>
+          <option>Não</option>
+        </select>
+
+        <label>5. Nível de estresse atual:</label>
+        <select id="estresseInput" required>
+          <option value="">Selecione</option>
+          <option>Baixo</option>
+          <option>Médio</option>
+          <option>Alto</option>
+        </select>
+
+        <label>6. Você fuma ou consome álcool regularmente?</label>
+        <select id="viciosInput" required>
+          <option value="">Selecione</option>
+          <option>Não</option>
+          <option>Sim, às vezes</option>
+          <option>Sim, frequentemente</option>
+        </select>
+
+        <label>7. Comentários adicionais:</label>
+        <textarea id="comentariosInput" rows="4"></textarea>
+
+        <button type="submit">Enviar Avaliação</button>
+      </form>
+      <p id="mensagem"></p>
+    </section>
+
+    <!-- PDF -->
+    <section id="pdf" class="section">
+      <h2>📄 Baixar Guia Completo</h2>
+      <p>Baixe o guia profissional completo em PDF:</p>
+
+      <a href="GUIA-DEFINITIVO-PARA-UMA-VIDA-SAUDAVEL.pdf" download>
+        <button>Baixar PDF Premium</button>
+      </a>
+    </section>
+
+  </main>
+
   <footer>
-    <p>&copy; 2025 Vida Saudável. Todos os direitos reservados.</p>
+    <p>© 2025 Vida Saudável • Todos os direitos reservados</p>
   </footer>
 
-  <script>
-    // Animações ao rolar a página
-    const elements = document.querySelectorAll('.fade-in, .slide-up');
-    function checkScroll() {
-      const triggerBottom = window.innerHeight * 0.85;
-      elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < triggerBottom) {
-          el.classList.add('show');
-        }
-      });
-    }
-    window.addEventListener('scroll', checkScroll);
-    checkScroll();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,130 +1,239 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* ------------------------
+   ESTILO GLOBAL PREMIUM
+-------------------------*/
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f9f8;
-  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5fdfb;
+  color: #222;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
+/* ------------------------
+      CABEÇALHO
+-------------------------*/
 header {
-  background: #00a37a;
+  background: #1ebd99;
   color: white;
   padding: 20px 0;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
+  margin-top: 10px;
 }
 
 nav ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 18px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
+/* ------------------------
+          HERO
+-------------------------*/
 .hero {
-  background: linear-gradient(to right, #00c6a7, #007a60);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #1ebd99, #128a6f);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
-section {
-  padding: 50px 20px;
+.hero h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ------------------------
+        SEÇÕES
+-------------------------*/
+.section {
   max-width: 900px;
-  margin: auto;
+  margin: 60px auto;
   text-align: center;
+  padding: 20px;
+  display: none; /* SPA: todas escondidas inicialmente */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section img {
+.section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section img {
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   border-radius: 15px;
-  margin: 20px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
 }
 
-ul {
-  text-align: left;
-  display: inline-block;
-}
-
-.video-container {
-  display: flex;
-  justify-content: center;
-}
-
-iframe {
+/* Vídeo */
+.video-container iframe {
   width: 100%;
   max-width: 600px;
   height: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Formulários */
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 400px;
-  margin: auto;
+  gap: 15px;
+  max-width: 450px;
+  margin: 0 auto;
   text-align: left;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+select,
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: #1ebd99;
+  box-shadow: 0 0 5px rgba(30, 189, 153, 0.5);
 }
 
 button {
-  background-color: #00a37a;
+  background: #1ebd99;
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
   transition: 0.3s;
 }
 
 button:hover {
-  background-color: #007a60;
+  background: #128a6f;
   transform: scale(1.05);
 }
 
+/* ------------------------
+        FOOTER
+-------------------------*/
 footer {
-  text-align: center;
+  margin-top: 60px;
   padding: 20px;
-  background-color: #00a37a;
+  background: #1ebd99;
+  text-align: center;
   color: white;
+  font-weight: 600;
 }
 
-/* Animações */
-.fade-in, .slide-up {
+/* ------------------------
+       ANIMAÇÕES
+-------------------------*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ScrollReveal extra */
+.reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(40px);
+  transition: 1s ease;
 }
 
-.show {
+.reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+/* =============================
+      RESPONSIVIDADE MOBILE
+============================= */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .section {
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
 }
